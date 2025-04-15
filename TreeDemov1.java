@@ -56,8 +56,15 @@ class Node{
 	    * @param root The root node of the tree/subtree
 	    */
 	   public void preOrderTraversal(Node root){
-		//implement in here
-		   
+		 //base case
+		   if (root == null) {
+			   return;
+		   }
+		   System.out.print(root.value+ " ");
+		   //left recursively
+		   preOrderTraversal(root.left);
+		 //right recursively
+		   preOrderTraversal(root.right);
 	   }
 	   
 	   /**
