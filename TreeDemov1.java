@@ -89,7 +89,16 @@ class Node{
 	    * @param root The root node of the tree/subtree
 	    */	
 	   public void postOrderTraversal(Node root){
-      //implement in here
+		 //base case
+		   if (root == null) {
+			   return;
+		   }
+		   //left recursively
+		   postOrderTraversal(root.left);
+		   //right recursively
+		   postOrderTraversal(root.right);
+		   //process the root
+		   System.out.print(root.value+ " ");
 		   
 	   }
 	   
