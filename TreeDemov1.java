@@ -72,7 +72,16 @@ class Node{
 	    * @param root The root node of the tree/subtree
 	    */
 	   public void inOrderTraversal(Node root){
-	      //implement in here
+		 //base case
+		   if (root == null) {
+			   return;
+		   }
+		   //left recursively
+		   inOrderTraversal(root.left);
+		   //process the root
+		   System.out.print(root.value+ " ");
+		   //right recursively
+		   inOrderTraversal(root.right);
 	   }
 	   
 	   /**
