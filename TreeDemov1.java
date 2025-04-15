@@ -119,8 +119,19 @@ class Node{
 	    * @return The minimum value
 	    */
 	   public int getMin(Node root){
-      //implement in here
-	      
+		 //base case
+		   if (root==null) {
+			   return false;
+		   }
+		   if (root.value==key) {
+			   return true;
+		   }
+		   else if (key < root.value) {
+			   return find(root.left,key);
+		   }
+		   else {
+			   return find(root.right,key);
+		   }
 	   }
 	  
 	   /**
