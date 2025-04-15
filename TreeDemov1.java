@@ -143,7 +143,10 @@ class Node{
 		   * @return The maximum value
 		   */
 	   public int getMax(Node root){
-      //implement in here
+		   if (root.right==null) {
+		    	  return root.value;
+		      }
+		      return getMax(root.right);
 	   }
 	   
 	   /**
